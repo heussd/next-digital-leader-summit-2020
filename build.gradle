@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group 'com.pwc'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.optaplanner:optaplanner-core:7.43.1.Final'
+    implementation 'org.slf4j:slf4j-api:2.0.0-alpha1'
+    implementation 'ch.qos.logback:logback-classic:1.3.0-alpha5'
+}

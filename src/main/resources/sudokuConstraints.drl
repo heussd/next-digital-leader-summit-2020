@@ -1,0 +1,18 @@
+import domain.Cell
+package org.optaplanner.examples.dinnerparty.solver;
+    dialect "java"
+
+    
+rule "rows"
+    when
+        $cell_1 : Cell()
+        $cell_2 : Cell()
+        not (
+            $cell_1.getIndex_x() == $cell_2.getIndes_x()
+//            SeatDesignation(guestJobType == $jobType, seatTable == $table, $leftId : id, $firstJob : guestJob)
+//            and SeatDesignation(guestJobType == $jobType, seatTable == $table, id > $leftId,
+//                    differentKindIfNeeded($firstJob))
+        )
+    then
+        scoreHolder.addConstraintMatch(kcontext, -100);
+end
