@@ -5,25 +5,25 @@ import org.optaplanner.core.api.domain.variable.PlanningVariable;
 
 @PlanningEntity
 public class Cell {
-    public Integer index_x;
-    public Integer index_y;
+    public Integer column;
+    public Integer row;
     public Integer value;
 
-    public Cell(Integer index_x, Integer index_y, Integer value) {
-        this.index_x = index_x;
-        this.index_y = index_y;
+    public Cell(Integer column, Integer row, Integer value) {
+        this.column = column;
+        this.row = row;
         this.value = value;
     }
 
     public Cell() {
     }
 
-    public Integer getIndex_x(){
-        return index_x;
+    public Integer getColumn(){
+        return column;
     }
 
-    public Integer getIndex_y(){
-        return index_y;
+    public Integer getRow(){
+        return row;
     }
 
     @PlanningVariable(valueRangeProviderRefs = {"intRange"})
@@ -31,23 +31,27 @@ public class Cell {
         return value;
     }
 
-    public void setIndex_x(Integer index_x) {
-        this.index_x = index_x;
+    public void setColumn(Integer column) {
+        this.column = column;
     }
 
-    public void setIndex_y(Integer index_y) {
-        this.index_y = index_y;
+    public void setRow(Integer row) {
+        this.row = row;
     }
 
     public void setValue(Integer value) {
         this.value = value;
     }
 
+    public String getRegion() {
+        return (row /3 + "") + (column / 3 + "");
+    }
+
     @Override
     public String toString() {
         return "Cell{" +
-                "index_x=" + index_x +
-                ", index_y=" + index_y +
+                "  column=" + column +
+                ", row=" + row +
                 ", value=" + value +
                 '}';
     }

@@ -8,7 +8,9 @@
     </scoreDirectorFactory>
 
     <termination>
-        <secondsSpentLimit>20</secondsSpentLimit>
+        <terminationCompositionStyle>OR</terminationCompositionStyle>
+        <bestScoreLimit>0</bestScoreLimit>
+        <secondsSpentLimit>10</secondsSpentLimit>
 <!--        <scoreCalculationCountLimit>1</scoreCalculationCountLimit>-->
 
     </termination>

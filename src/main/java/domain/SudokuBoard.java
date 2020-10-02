@@ -57,21 +57,30 @@ public class SudokuBoard {
     }
 
     public void printBoard(){
-        for(int i = 1; i < 10; i++){
+        for(int i = 0; i < 9; i++){
             String row = "";
-            for(int j = 1; j<10;j++){
+            for(int j = 0; j<9;j++){
                 int finalI = i;
                 int finalJ = j;
-                Cell currentCell = cells.stream().filter(cell -> finalI == cell.getIndex_x() && finalJ == cell.getIndex_y()).findAny().orElse(null);
+                Cell currentCell = cells.stream().filter(cell -> finalI == cell.getColumn() && finalJ == cell.getRow()).findAny().orElse(null);
                 row += currentCell.getValue().toString() + " ";
-                if(j%3 == 0){
+                if((j+1)%3 == 0){
                     row+= "| ";
                 }
             }
             System.out.println(row);
-            if(i%3 == 0){
+            if((i+1)%3 == 0){
                 System.out.println("- - -   - - -   - - -");
             }
         }
+    }
+
+    public void fill(int value) {
+        for(int i = 0; i < 9; i++){
+            for(int j = 0; j < 9; j++){
+                this.cells.add(new Cell(j,i,value));
+            }
+        }
+
     }
 }
