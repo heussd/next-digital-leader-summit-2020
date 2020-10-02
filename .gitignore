@@ -3,7 +3,7 @@ build
 # Eclipse, Netbeans and IntelliJ files
 /.*
 !.gitignore
-!.gitpod.yaml
+!.gitpod.yml
 /nbproject
 /*.ipr
 /*.iws
