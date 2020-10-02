@@ -3,27 +3,16 @@
     <scanAnnotatedClasses/>
     <scoreDirectorFactory>
         <scoreDrl>sudokuConstraints.drl</scoreDrl>
-<!--        <scoreDrl>org/optaplanner/examples/dinnerparty/solver/dinnerPartyExtraConstraints.xls</scoreDrl>-->
-<!--        <easyScoreCalculatorClass>ScoreCalculator</easyScoreCalculatorClass>-->
     </scoreDirectorFactory>
 
     <termination>
         <terminationCompositionStyle>OR</terminationCompositionStyle>
         <bestScoreLimit>0</bestScoreLimit>
         <secondsSpentLimit>10</secondsSpentLimit>
-<!--        <scoreCalculationCountLimit>1</scoreCalculationCountLimit>-->
 
     </termination>
 
     <localSearch>
         <localSearchType>TABU_SEARCH</localSearchType>
-        <!--<acceptor>
-            <entityTabuSize>7</entityTabuSize>
-        </acceptor>
-        <forager>
-            <acceptedCountLimit>1000</acceptedCountLimit>
-        </forager>-->
     </localSearch>
-
-
 </solver>
