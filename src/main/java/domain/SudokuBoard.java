@@ -3,38 +3,45 @@ package domain;
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningScore;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
-import org.optaplanner.core.api.domain.valuerange.CountableValueRange;
-import org.optaplanner.core.api.domain.valuerange.ValueRangeFactory;
+import org.optaplanner.core.api.domain.solution.ProblemFactCollectionProperty;
 import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider;
-import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
+import org.optaplanner.core.api.score.buildin.simple.SimpleScore;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @PlanningSolution
 public class SudokuBoard {
+
     public List<Cell> cells = new ArrayList<Cell>();
 
-    public HardSoftScore score;
+    public SimpleScore score;
 
     @PlanningEntityCollectionProperty
     public List<Cell> getCells(){
         return cells;
     }
 
-    @ValueRangeProvider(id = "intRange")
-    public CountableValueRange<Integer> getIntRange() {
+    //@ValueRangeProvider(id = "intRange")
+    /*public CountableValueRange<Integer> getIntRange() {
         return ValueRangeFactory.createIntValueRange(1, 10, 1);
+    }*/
+
+    @ProblemFactCollectionProperty
+    @ValueRangeProvider(id = "intRange")
+    public List<Integer> getRange() {
+        return Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
     }
 
     @PlanningScore
-    public HardSoftScore getScore(){
+    public SimpleScore getScore(){
         return score;
     }
 
 
 
-    public void setScore(HardSoftScore score) {
+    public void setScore(SimpleScore score) {
         this.score = score;
     }
 

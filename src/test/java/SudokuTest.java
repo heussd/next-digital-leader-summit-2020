@@ -49,7 +49,7 @@ public class SudokuTest {
         SudokuBoard solvedSudokuBoard = solver.solve(unsolvedSudokuBoard);
 
         solvedSudokuBoard.printBoard();
-        Assert.assertEquals(0, solvedSudokuBoard.getScore().getHardScore());
+        Assert.assertEquals(0, solvedSudokuBoard.getScore().getScore());
     }
 
 }
