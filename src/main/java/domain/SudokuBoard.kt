@@ -8,41 +8,50 @@ import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider
 import org.optaplanner.core.api.score.buildin.simple.SimpleScore
 import java.util.*
 
+const val SUDOKU_DIMENSIONS = 9
+
 @PlanningSolution
 data class SudokuBoard(
         @PlanningEntityCollectionProperty
-        var cells: MutableList<Cell?> = ArrayList(),
+        var cells: MutableList<Cell?> = fillCells(),
 
         @PlanningScore
         var score: SimpleScore? = null,
 
         @ValueRangeProvider(id = "intRange")
         @ProblemFactCollectionProperty
-        val range: List<Int> = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9),
+        val range: List<Int> = listOf(1..SUDOKU_DIMENSIONS).flatten(),
 ) {
 
-    fun printBoard() {
-        for (i in 0..8) {
-            var row = ""
-            for (j in 0..8) {
+    override fun toString(): String {
+        var str = "\t " + " - - -  ".repeat(SUDOKU_DIMENSIONS / 3) + "\n "
+
+        for (i in 0 until SUDOKU_DIMENSIONS) {
+            var row = "\t| "
+            for (j in 0 until SUDOKU_DIMENSIONS) {
                 val currentCell = cells.stream().filter { cell: Cell? -> i == cell!!.column && j == cell.row }.findAny().orElse(null)
                 row += currentCell!!.value.toString() + " "
                 if ((j + 1) % 3 == 0) {
                     row += "| "
                 }
             }
-            println(row)
+            str += row + "\n"
             if ((i + 1) % 3 == 0) {
-                println("- - -   - - -   - - -")
+                str += "\t " + " - - -  ".repeat(SUDOKU_DIMENSIONS / 3) + "\n "
             }
         }
+        return str
     }
+}
 
-    fun fill(value: Int) {
-        for (i in 0..8) {
-            for (j in 0..8) {
-                cells.add(Cell(j, i, value))
-            }
+fun fillCells(): MutableList<Cell?> {
+    var cells: MutableList<Cell?> = ArrayList()
+
+    for (i in 0 until SUDOKU_DIMENSIONS) {
+        for (j in 0 until SUDOKU_DIMENSIONS) {
+
+            cells.add(Cell(j, i, 0))
         }
     }
+    return cells
 }
