@@ -11,10 +11,6 @@ data class Cell(
         @PlanningVariable(valueRangeProviderRefs = ["intRange"])
         var value: Int? = null
 ) {
-    fun getRegion(): String {
-        return (row / 3).toString() + "" + ((column / 3).toString() + "")
-    }
-
     override fun hashCode(): Int {
         return "$row$column".hashCode()
     }

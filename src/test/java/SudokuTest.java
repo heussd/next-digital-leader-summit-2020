@@ -1,7 +1,6 @@
 import domain.SudokuBoard;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
@@ -42,7 +41,6 @@ public class SudokuTest {
 
 
     @Test
-    @Ignore
     public void task1() {
         SudokuBoard unsolvedSudokuBoard = new SudokuBoard();
         SudokuBoard solvedSudokuBoard = OptaPlannerKt.solveAndPrint(unsolvedSudokuBoard);

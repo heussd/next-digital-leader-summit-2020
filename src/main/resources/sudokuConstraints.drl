@@ -7,28 +7,10 @@ import domain.Cell
 global SimpleScoreHolder scoreHolder;
 
     
-rule "rows"
-    when
-        $cell_1 : Cell()
+rule "hello cell"
+     when
+         $cell_1 : Cell()
         $cell_2 : Cell(row == $cell_1.row, column != $cell_1.column, value == $cell_1.value)
-    then
-        scoreHolder.addConstraintMatch((org.kie.api.runtime.rule.RuleContext) kcontext, -1);
-end
-
-
-rule "columns"
-    when
-        $cell_1 : Cell()
-        $cell_2 : Cell(column == $cell_1.column, row != $cell_1.row, value == $cell_1.value)
-    then
-        scoreHolder.addConstraintMatch((org.kie.api.runtime.rule.RuleContext) kcontext, -1);
-end
-
-
-rule "region"
-    when
-        $cell_1 : Cell()
-        $cell_2 : Cell(region == $cell_1.region, !(column == $cell_1.column && row == $cell_1.row), value == $cell_1.value)
-    then
+     then
         scoreHolder.addConstraintMatch((org.kie.api.runtime.rule.RuleContext) kcontext, -1);
 end
