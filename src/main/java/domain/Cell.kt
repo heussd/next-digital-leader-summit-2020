@@ -16,6 +16,6 @@ data class Cell(
     }
 
     override fun hashCode(): Int {
-        return getRegion().hashCode()
+        return "$row$column".hashCode()
     }
 }

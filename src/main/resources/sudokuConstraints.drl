@@ -15,6 +15,7 @@ rule "rows"
         scoreHolder.addConstraintMatch((org.kie.api.runtime.rule.RuleContext) kcontext, -1);
 end
 
+
 rule "columns"
     when
         $cell_1 : Cell()

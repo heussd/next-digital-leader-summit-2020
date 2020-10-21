@@ -10,13 +10,16 @@
 
 1. Open HTML test report [./build/reports/tests/test/index.html](./build/reports/tests/test/index.html)
 
-1. What is the output of the Unit Test?
+1. What is the output of the Unit Test `task0`?
+
 
 # First Task
 
 1. Switch to Branch Taks_1 or open a new instance GITPODLINK
 
-2. We have prepared a Sudoku Board for you and your taks is to fill the board with the number 8. For this you have to create a new Constraint Rule in the file sudokuConstraints.drl. You can test your code with the command gradle -t test.
+2. We have prepared a Sudoku Board for you and your task is to fill the board with the number 8. For this you have to create a new Constraint Rule in the file sudokuConstraints.drl. You can test your code with the command gradle -t test.
+
+3. If you completed the task, the unit test named `task1` succeeds.
 
 # Second Task
 
@@ -27,9 +30,14 @@ One to check that each row in the Sudoku Board is valid,
 that means all numbers 1 - 9 are present, and the second rule is to check each column in the Sudoku Board.
 (You will only need to edit sudokuConstraints.drl, but also have a look at Cell.kt)
 
+3. If you completed the task, the unit test named `task2` succeeds.
+
+
 # Third Task
 
 1. Switch to Branch Taks_3 or open a new instance GITPODLINK
 
 2. To get a valid Sudoku one rule is missing, you will implent this rule now. A Sudoku Board has nine 3x3 regions. In each reagion all numbers from 1-9 must be present.
 (You will need to edit sudokuConstraints.drl, but also can edit Cell.kt)
+
+3. If you completed the task, the unit test named `task3` succeeds.
