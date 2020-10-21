@@ -8,6 +8,8 @@
 
 1. Do you find the file of the Sudoku Board implementation?
 
+1. Open HTML test report [./build/reports/tests/test/index.html](./build/reports/tests/test/index.html)
+
 1. What is the output of the Unit Test?
 
 # First Task
