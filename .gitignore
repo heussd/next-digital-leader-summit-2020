@@ -8,6 +8,7 @@ build
 /*.ipr
 /*.iws
 /*.iml
+bin/
 
 # Compiled class file
 *.class
