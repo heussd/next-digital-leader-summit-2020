@@ -8,7 +8,7 @@
 
 1. Do you find the file of the Sudoku Board implementation?
 
-1. Open HTML test report [./build/reports/tests/test/index.html](./build/reports/tests/test/index.html)
+1. Locate the test report html file [./build/reports/tests/test/classes/SudokuTest.html](./build/reports/tests/test/classes/SudokuTest.html) and open it as preview. (You can right-click on the file in the Explorer and select 'Open with' -> 'preview')
 
 1. What is the output of the Unit Test `task0`?
 
