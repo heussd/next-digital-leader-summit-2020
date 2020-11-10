@@ -9,8 +9,8 @@ global SimpleScoreHolder scoreHolder;
     
 rule "hello cell"
      when
-         $cell_1 : Cell()
-        $cell_2 : Cell(row == $cell_1.row, column != $cell_1.column, value == $cell_1.value)
+        $cell_1 : Cell(row == 2)
      then
-        scoreHolder.addConstraintMatch((org.kie.api.runtime.rule.RuleContext) kcontext, -1);
+        System.out.println($cell_1);
+        scoreHolder.addConstraintMatch(kcontext, 0);
 end
