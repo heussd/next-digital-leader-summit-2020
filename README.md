@@ -1,5 +1,8 @@
 # NEXT DIGITAL LEADER SUMMIT 2020
 
+![](cheatsheet.png)
+
+
 # Get started
 1. You will have to code in this session. We have prepared a running development environment on gitpod.io. Please click on the button to start you own instance.
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/heussd/next-digital-leader-summit-2020)
