@@ -5,7 +5,7 @@
 
 # Get started
 1. You will have to code in this session. We have prepared a running development environment on gitpod.io. Please click on the button to start you own instance.
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/heussd/next-digital-leader-summit-2020)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/heussd/next-digital-leader-summit-2020/tree/task0)
 
 1. Make yourself familiar with the Editor (It is very similiar to VS Code)
 
@@ -18,7 +18,7 @@
 
 # First Task
 
-1. Switch to Branch Taks_1 or open a new instance GITPODLINK
+1. You can continue to work on this branch or switch to Branch task1 or open a new instance for a fresh start. [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/heussd/next-digital-leader-summit-2020/tree/task1)
 
 2. We have prepared a Sudoku Board for you and your task is to fill the board with the number 8. For this you have to create a new Constraint Rule in the file sudokuConstraints.drl. You can test your code with the command gradle -t test.
 
@@ -26,7 +26,7 @@
 
 # Second Task
 
-1. Switch to Branch Taks_2 or open a new instance GITPODLINK
+1. You can continue to work on this branch or switch to Branch task2 or open a new instance for a fresh start. [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/heussd/next-digital-leader-summit-2020/tree/task2)
 
 2. In this task you will implement two new Constraint Rules. 
 One to check that each row in the Sudoku Board is valid, 
@@ -38,7 +38,7 @@ that means all numbers 1 - 9 are present, and the second rule is to check each c
 
 # Third Task
 
-1. Switch to Branch Taks_3 or open a new instance GITPODLINK
+1. You can continue to work on this branch or switch to Branch task3 or open a new instance for a fresh start. [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/heussd/next-digital-leader-summit-2020/tree/task3)
 
 2. To get a valid Sudoku one rule is missing, you will implent this rule now. A Sudoku Board has nine 3x3 regions. In each reagion all numbers from 1-9 must be present.
 (You will need to edit sudokuConstraints.drl, but also can edit Cell.kt)
