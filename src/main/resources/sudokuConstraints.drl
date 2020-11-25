@@ -6,11 +6,19 @@ import domain.Cell
 
 global SimpleScoreHolder scoreHolder;
 
-    
-rule "hello cell"
-     when
-        $cell_1 : Cell(row == 2)
-     then
-        System.out.println($cell_1);
-        scoreHolder.addConstraintMatch(kcontext, 0);
+// Task 0
+// rule "hello cell"
+//     when
+//        $cell_1 : Cell(row == 2)
+//     then
+//        System.out.println($cell_1);
+//        scoreHolder.addConstraintMatch(kcontext, 0);
+// end
+
+// Task 1
+rule "all eights"
+    when
+        // TODO implemnt rule so that each cell has the value 8
+    then
+        // TODO implemnt rule so that each cell has the value 8
 end
