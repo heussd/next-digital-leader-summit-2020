@@ -1,6 +1,7 @@
 import domain.SudokuBoard;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
@@ -39,7 +40,7 @@ public class SudokuTest {
         System.out.println("/ / /       \\/       \\ \\ \\  [____>   <____]");
     }
 
-
+    @Ignore
     @Test
     public void task1() {
         SudokuBoard unsolvedSudokuBoard = new SudokuBoard();

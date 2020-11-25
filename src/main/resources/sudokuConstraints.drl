@@ -16,9 +16,24 @@ global SimpleScoreHolder scoreHolder;
 // end
 
 // Task 1
-rule "all eights"
+// rule "all eights"
+//    when
+//        Cell(value != 8)
+//    then
+//        scoreHolder.addConstraintMatch(kcontext, -1);
+// end
+
+// Task 2
+rule "unique values for each cell in a row"
     when
-        // TODO implemnt rule so that each cell has the value 8
-    then
-        // TODO implemnt rule so that each cell has the value 8
+        // TODO Implement
+    then 
+        // TODO Implement
+end
+
+rule "unique values for each cell in a column"
+     when
+        // TODO Implement
+    then 
+        // TODO Implement
 end
