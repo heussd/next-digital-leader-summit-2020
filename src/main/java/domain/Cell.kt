@@ -14,4 +14,6 @@ data class Cell(
     override fun hashCode(): Int {
         return "$row$column".hashCode()
     }
+
+    // add Helper functions here if needed
 }

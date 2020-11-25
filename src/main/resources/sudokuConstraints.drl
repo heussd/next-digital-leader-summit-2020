@@ -25,15 +25,26 @@ global SimpleScoreHolder scoreHolder;
 
 // Task 2
 rule "unique values for each cell in a row"
-    when
-        // TODO Implement
-    then 
-        // TODO Implement
+     when
+        $cell_1 : Cell()
+        $cell_2 : Cell(row == $cell_1.row, column != $cell_1.column, value == $cell_1.value)
+    then
+        scoreHolder.addConstraintMatch((org.kie.api.runtime.rule.RuleContext) kcontext, -1);
 end
 
 rule "unique values for each cell in a column"
-     when
-        // TODO Implement
-    then 
-        // TODO Implement
+    when
+        $cell_1 : Cell()
+        $cell_2 : Cell(column == $cell_1.column, row != $cell_1.row, value == $cell_1.value)
+    then
+        scoreHolder.addConstraintMatch((org.kie.api.runtime.rule.RuleContext) kcontext, -1);
+end
+
+// Task 3
+
+rule "unique values for each region"
+    when
+        // TODO implement
+    then
+        // TODO implement
 end
