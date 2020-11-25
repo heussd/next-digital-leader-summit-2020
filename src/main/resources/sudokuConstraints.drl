@@ -18,7 +18,7 @@ global SimpleScoreHolder scoreHolder;
 // Task 1
 rule "all eights"
     when
-        // TODO implemnt rule so that each cell has the value 8
+        // TODO implement rule so that each cell has the value 8
     then
-        // TODO implemnt rule so that each cell has the value 8
+        // TODO implement rule so that each cell has the value 8
 end
